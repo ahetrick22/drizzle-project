@@ -1,0 +1,3 @@
+[submodule "drizzle-project-client"]
+	path = drizzle-project-client
+	url = https://github.com/ahetrick22/drizzle-project-client.git

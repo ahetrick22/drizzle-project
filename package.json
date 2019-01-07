@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "truffle test",
-    "dev": "concurrently --kill-others-on-fail \"nodemon server\" \"cd client && npm start\""
+    "dev": "concurrently --kill-others-on-fail \"nodemon server\" \"cd drizzle-project-client && npm start\""
   },
   "author": "",
   "license": "ISC"
