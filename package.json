@@ -1,0 +1,26 @@
+{
+  "name": "drizzle-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "truffle-assertions": "^0.7.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  },
+  "scripts": {
+    "test": "truffle test",
+    "dev": "concurrently --kill-others-on-fail \"nodemon server\" \"cd client && npm start\""
+  },
+  "author": "",
+  "license": "ISC"
+}
