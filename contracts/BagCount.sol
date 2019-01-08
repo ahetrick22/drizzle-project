@@ -15,7 +15,7 @@ contract BagCount {
     address public recyclingPlant;
     
     //each center address is mapped to a discrepancy tracker
-    mapping(address => uint) discrepancies;
+    mapping(address => uint) public discrepancies;
 
     //each delivery is given a unique ID
     uint private deliveryId;
@@ -36,8 +36,9 @@ contract BagCount {
     }
 
     //initializes a new center with a discrepancy of 0
-    function createCenter() public {
+    function createCenter() public returns(uint) {
         discrepancies[msg.sender] = 0;
+        return discrepancies[msg.sender];
     }
 
     event LogCenterDelivery(
@@ -88,7 +89,8 @@ contract BagCount {
     }
 
     //shows the total discrepancy at a particular center
-    function getDiscrepancies(address center) public {
+    function getDiscrepancies(address center) public returns (uint) {
         emit LogDiscrepancies(discrepancies[center]);
+        return discrepancies[center];
     }
 }
